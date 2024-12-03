@@ -30,7 +30,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ### Links
 
-- Live Site URL: [https://dejuliansr.github.io/front-end-mentor-rest-countries-api-with-color-theme](https://front-end-mentor-rest-countries-api.netlify.app/)]([https://dejuliansr.github.io/front-end-mentor-rest-countries-api-with-color-theme](https://front-end-mentor-rest-countries-api.netlify.app/))
+- Live Site URL: [https://front-end-mentor-rest-countries-api.netlify.app/](https://front-end-mentor-rest-countries-api.netlify.app)
 
 ## My process
 
