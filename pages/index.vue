@@ -1,5 +1,5 @@
 <template>
-  <div class="dark:bg-dark-mode-Background min-h-screen">
+  <div class="min-h-screen">
     <section class="container mx-auto p-6">
       <div class="flex flex-col md:flex-row md:justify-between items-start mb-6">
         <div class="relative w-full md:w-1/2">
@@ -12,11 +12,11 @@
           />
           <!-- Icon Search -->
           <span
-            class="absolute left-3 top-1/2 transform -translate-y-1/2 dark:hidden">
+            class="absolute left-3 top-1/3 transform -translate-y-1/2 dark:hidden">
             <img src="@/assets/icons/search.svg" alt="Search Icon" class="w-5 h-5" />
           </span>
           <span
-            class="absolute left-3 top-1/2 transform -translate-y-1/2 hidden dark:inline">
+            class="absolute left-3 top-1/3 transform -translate-y-1/2 hidden dark:inline">
             <img src="@/assets/icons/search-dark.svg" alt="Search Icon" class="w-5 h-5" />
           </span>
         </div>
@@ -36,8 +36,12 @@
       </div>
 
       <!-- Countries Grid -->
-      <div v-if="loading" class="text-center dark:text-white">Loading...</div>
-      <div v-else class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div v-if="loading" class="text-center dark:text-white transition-all duration-300">Loading...</div>
+      <transition-group
+        name="country-list"
+        tag="div"
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"
+      >
         <div
           v-for="country in filteredCountries"
           :key="country.name"
@@ -52,21 +56,21 @@
             />
           </div>
           <div class="p-6 flex-1 flex flex-col justify-between">
-            <h2 class="text-lg font-semibold mb-2 text-light-mode-text dark:text-dark-mode-element-text truncate">
+            <h2 class="text-lg font-semibold mb-2 text-light-mode-text dark:text-dark-mode-element-text max-sm:truncate">
               {{ country.name }}
             </h2>
-            <p class="text-light-mode-text dark:text-neutral-300 font-light">
+            <p class="text-light-mode-text dark:text-neutral-300 font-light transition-all duration-300">
               <span class="font-bold">Population:</span> {{ country.population.toLocaleString() }}
             </p>
-            <p class="text-light-mode-text dark:text-neutral-300">
+            <p class="text-light-mode-text dark:text-neutral-300 transition-all duration-300">
               <span class="font-bold">Region:</span> {{ country.region }}
             </p>
-            <p class="text-light-mode-text dark:text-neutral-300">
+            <p class="text-light-mode-text dark:text-neutral-300 transition-all duration-300">
               <span class="font-bold">Capital:</span> {{ country.capital }}
             </p>
           </div>
         </div>
-      </div>
+      </transition-group>
     </section>
   </div>
 </template>
@@ -105,5 +109,23 @@ const filteredCountries = computed(() => {
 }
 .aspect-h-9 {
   aspect-ratio: 16 / 9;
+}
+
+/* Animasi masuk */
+.country-list-enter-active {
+  transition: all 0.3s ease;
+}
+.country-list-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Animasi keluar */
+.country-list-leave-active {
+  transition: all 0.3s ease;
+}
+.country-list-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
 }
 </style>

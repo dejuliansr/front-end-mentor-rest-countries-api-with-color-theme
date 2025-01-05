@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-light-mode-backround dark:bg-dark-mode-Background min-h-screen">
+  <div class="bg-light-mode-backround dark:bg-dark-mode-Background min-h-screen transition-all duration-300">
     <section class="container mx-auto px-4 py-8 min-h-screen">
       <!-- Tombol Back -->
       <button
         @click="$router.back()"
-        class="flex items-center space-x-2 bg-white dark:bg-dark-mode-element border border-gray-300 dark:border-none rounded-md px-4 py-2 shadow-md mb-8"
+        class="flex items-center space-x-2 bg-white dark:bg-dark-mode-element border border-gray-300 dark:border-none rounded-md px-4 py-2 shadow-md mb-8 transition-all duration-300"
       >
         <img
           src="@/assets/icons/arrow-left-dark.svg"
