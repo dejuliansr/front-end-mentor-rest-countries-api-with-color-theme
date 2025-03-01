@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-light-mode-backround dark:bg-dark-mode-Background ">
+  <div class="bg-light-mode-backround dark:bg-dark-mode-Background transition-all duration-300">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

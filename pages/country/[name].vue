@@ -4,7 +4,7 @@
       <!-- Tombol Back -->
       <button
         @click="$router.back()"
-        class="flex items-center space-x-2 bg-white dark:bg-dark-mode-element border border-gray-300 dark:border-none rounded-md px-4 py-2 shadow-md mb-8 transition-all duration-300"
+        class="flex items-center space-x-2 bg-white dark:bg-dark-mode-element border hover:bg-gray-200 dark:hover:bg-[hsl(209,23%,28%)] border-gray-300 dark:border-none rounded-md px-4 py-2 shadow-md mb-8 transition-all duration-300"
       >
         <img
           src="@/assets/icons/arrow-left-dark.svg"
