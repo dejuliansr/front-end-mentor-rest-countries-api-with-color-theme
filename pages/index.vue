@@ -58,7 +58,24 @@
       </div>
 
       <!-- Countries Grid -->
-      <div v-if="loading" class="text-center dark:text-white transition-all duration-300">Loading...</div>
+      <div v-if="loading" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div 
+          v-for="n in 8" 
+          :key="n" 
+          class="bg-light-mode-backround dark:bg-dark-mode-element rounded-lg shadow-md overflow-hidden max-w-xs mx-auto flex flex-col animate-pulse">
+          
+          <!-- Skeleton untuk gambar bendera -->
+          <div class="w-full aspect-w-16 aspect-h-9 overflow-hidden bg-gray-300 dark:bg-gray-700"></div>
+
+          <!-- Skeleton untuk teks -->
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div class="h-6 bg-gray-300 dark:bg-gray-700 rounded w-52 sm:w-56 md:w-48 lg:w-[12rem] mb-4"></div>
+            <div class="h-4 bg-gray-300 dark:bg-gray-700 rounded w-32 mb-2"></div>
+            <div class="h-4 bg-gray-300 dark:bg-gray-700 rounded w-40 mb-2"></div>
+            <div class="h-4 bg-gray-300 dark:bg-gray-700 rounded w-36"></div>
+          </div>
+        </div>
+      </div>
       <transition-group
         name="country-list"
         tag="div"
