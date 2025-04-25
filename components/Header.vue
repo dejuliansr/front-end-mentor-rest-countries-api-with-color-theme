@@ -4,8 +4,8 @@
       <h1 class="text-2xl max-md:text-lg font-semibold font-rubik text-light-mode-text dark:text-dark-mode-element-text transition-all duration-300">Where in the world?</h1>
       <!-- Tombol Dark Mode -->
       <button class="text-sm flex items-center text-light-mode-text dark:text-dark-mode-element-text transition-all duration-300" @click="toggleDarkMode">
-        <img :src="enabled ? sunIcon : moonIcon" alt="Mode Icon" class="h-6 w-6 mr-2" />
-        {{ enabled ? 'Light Mode' : 'Dark Mode' }}
+        <img :src="enabled ? moonIcon : sunIcon" alt="Mode Icon" class="h-6 w-6 mr-2" />
+        {{ enabled ? 'Dark Mode' : 'Light Mode' }}
       </button>
     </div>
   </header>
