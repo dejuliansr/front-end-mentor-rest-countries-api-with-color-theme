@@ -1,5 +1,5 @@
 <template>
-  <section class="min-h-screen container mx-auto px-6 xl:px-0">
+  <section class="min-h-screen container mx-auto px-6 xl:px-12">
     <div class="flex flex-col md:flex-row md:justify-between items-start mt-12">
       <div class="relative w-full md:w-1/2">
         <!-- Input Pencarian -->

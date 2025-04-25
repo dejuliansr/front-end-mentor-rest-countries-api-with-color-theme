@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-light-mode-backround dark:bg-dark-mode-element p-6 shadow-md transition-all duration-300">
+  <header class="bg-light-mode-backround dark:bg-dark-mode-element py-6 px-6 xl:px-12 shadow-md transition-all duration-300">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-2xl max-md:text-lg font-semibold font-rubik text-light-mode-text dark:text-dark-mode-element-text transition-all duration-300">Where in the world?</h1>
       <!-- Tombol Dark Mode -->
